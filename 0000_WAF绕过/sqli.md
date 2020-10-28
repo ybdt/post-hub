@@ -1,8 +1,6 @@
-1、sql注入绕过安全狗waf：
+1、  
 ```
-and 1=1
+/*!*/
 ```
-变为
-```
-and /*!1=1*/
-```
+参考实例：  
+https://mp.weixin.qq.com/s/84se5CxYlVT05bcw654wKg 这篇文章用到了上述的技巧绕过了Mod_Security
