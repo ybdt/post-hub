@@ -16,7 +16,7 @@
 ```
 (@a:=concat(@a,schema_name,'<br>'))
 ```
-连接@a的值和schema_name的值以及'<br>'  
+连接这3个参数的值  
 倒数第二层的解释，此时语句变成了：  
 ```
 (select (@a) from ( information_schema.schemata) where (@a) in (@a:=concat(@a,schema_name,'<br>')) )
