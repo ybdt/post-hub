@@ -21,7 +21,7 @@
 ```
 (select (@a) from ( information_schema.schemata) where (@a) in (@a:=concat(@a,schema_name,'<br>')) )
 ```
-通常的where in用法形如：select x from y where x in '1,2,3'是选择某个字段，然后字段值在某个范围  
+通常的where in用法形如：select x from y where x in (1,2,3)从表y中选择字段x，然后x的值范围是（1,2,3）  
 但是此条语句并不是通常的where in用法，而是将information_schema.schemata中schema_name的值依次添加到变量@a中  
 倒数第三层的解释，此时语句变成了：  
 ```
