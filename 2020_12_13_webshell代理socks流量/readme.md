@@ -23,7 +23,7 @@ win10_1909_pro_x64_zh-chs本地浏览器通过proxifier走Neo-reGeorg后，成�
 ```
 nmap -v -sT -Pn 172.16.35.0/24
 ```
-但是测试时发现，会把很多没开放的端口误报为开放，并且proxychains telnet 172.16.35.139 87时，87端口命名没开放，也能通，有时间再去进一步排查以及测试pystinger
+但是测试时发现，会把很多没开放的端口误报为开放，并且proxychains telnet 172.16.35.139 87时，87端口明明没开放，也能通，有时间再去进一步排查以及测试pystinger
 
 参考链接：  
 https://www.freebuf.com/articles/web/255801.html  
