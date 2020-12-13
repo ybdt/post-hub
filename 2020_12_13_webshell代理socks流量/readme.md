@@ -1,4 +1,4 @@
-目前主流webshell代理有如下  
+目前主流的webshell代理socks流量有如下  
 https://github.com/sensepost/reGeorg  
 https://github.com/L-codes/Neo-reGeorg  
 https://github.com/nccgroup/ABPTTS  
