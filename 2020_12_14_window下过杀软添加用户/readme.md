@@ -8,4 +8,8 @@ netuser.exe是我编译后的
 密码：1qaz@WSX
 
 原理：  
-利用小众语言nim的天然静态免杀性，以及直接调用Windows API中的NetUserAdd和NetLocalGroupAddMembers
+直接调用Windows API中的NetUserAdd和NetLocalGroupAddMembers  
+利用小众语言nim的天然静态免杀性  
+
+免杀效果：  
+![image](./0.png)
