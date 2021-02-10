@@ -18,7 +18,7 @@ int main() {
     return 0;
 }
 ```
-下载并安装VS2019，安装时选择C++和windows的类别，创建windows控制台项目
+下载并安装VS2019，安装时勾选C++和windows这2类，创建windows控制台项目
 直接在VS2019下编译会有类型匹配问题，进行强制类型转换的修改，能成功编译的代码如下
 ```
 #include <windows.h>
