@@ -1,4 +1,4 @@
-#0x01 shellcode测试
+# 0x01 shellcode测试
 Cobalt Strike 4.2  
 创建监听器beacon http  
 Attacks->Packages->Payload Generator（选择之前创建的监听器，输出C格式，勾选x64）  
@@ -41,7 +41,7 @@ int main() {
 但使用火绒扫描后，却提示病毒，如下图  
 ![image](./0.png)
 
-0x02 shellcode免杀
+# 0x02 shellcode免杀
 使用如下C代码，对shellcode进行简单编码（每个字节和数字1进行异或）
 ```
 unsigned char buf[] = "\xfc\x48\x83\xe4\xf0\xe8\xc8\x00\x00...";
