@@ -12,4 +12,4 @@ netuser.exe是我编译后的
 利用小众语言nim的天然静态免杀性  
 
 免杀效果：  
-![image](./0.png)
+![image](./pic/0.png)
