@@ -7,7 +7,7 @@ tzselect
 ```
 TZ='Asia/Shanghai'; export TZ
 ```
-添加到家目录下的.profile
+添加到家目录下的.profile文件末尾  
 重新登录即可
 
 参考链接：  
