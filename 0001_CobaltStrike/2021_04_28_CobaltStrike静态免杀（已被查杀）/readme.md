@@ -42,6 +42,12 @@ int main() {
     return 0;
 }
 ```
-编译执行后，能成功连接到CS
+编译后会被Windows Defender查杀，关闭Windows Defender，能成功连接到CS
 
-但在2021/04/28日测试时，会被Windows Defender、360查杀
+在VirusTotal上的检出率是29/67，如下图  
+![image](./pic/0.png)  
+提示360不能检测出来，如下图  
+![image](./pic/1.png)  
+但实际在一台物理机上测试发现，是能被检测的，如下图  
+![image](./pic/2.png)  
+![image](./pic/3.png)
