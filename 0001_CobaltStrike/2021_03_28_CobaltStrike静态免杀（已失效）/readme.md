@@ -1,3 +1,5 @@
+针对2021_02_10_CobaltStrike静态免杀的提取整理
+
 使用VS2019编译如下C代码  
 对shellcode进行异或编码，修改变量a的值即修改shellcode
 ```
