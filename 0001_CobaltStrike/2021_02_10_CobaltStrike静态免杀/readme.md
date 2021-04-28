@@ -46,6 +46,8 @@ int main() {
 # 0x01 shellcode免杀
 使用如下C代码，对shellcode进行简单编码（每个字节和数字1进行异或）
 ```
+#include <stdio.h>
+
 unsigned char buf[] = "\xfc\x48\x83\xe4\xf0\xe8\xc8\x00\x00...";
 
 int a = 1;
