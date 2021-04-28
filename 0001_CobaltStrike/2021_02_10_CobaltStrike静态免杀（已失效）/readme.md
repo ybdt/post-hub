@@ -44,7 +44,7 @@ int main() {
 ![image](./pic/0.png)
 
 # 0x01 shellcode免杀
-使用如下C代码，对shellcode进行简单编码（每个字节和数字1进行异或）
+使用如下C代码，对shellcode进行简单加密（每个字节和数字1进行异或）
 ```
 #include <stdio.h>
 
