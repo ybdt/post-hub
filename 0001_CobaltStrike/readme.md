@@ -5,4 +5,5 @@ https://github.com/zer0yu/Awesome-CobaltStrike
 静态免杀：  
 https://github.com/hack2fun/BypassAV  
 https://mp.weixin.qq.com/s/G1hmsDVTO2208Ymlia_ggQ  
-https://github.com/An0ny-m0us/DesertFox
+https://github.com/An0ny-m0us/DesertFox  
+https://github.com/knownsec/shellcodeloader
