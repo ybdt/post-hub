@@ -1,3 +1,5 @@
+#### 能过360
+
 借助项目https://github.com/hack2fun/BypassAV
 
 1、插件导入CS后，生成x64的shellcode，实际上不会生成exe（可能是插件的问题），而是生成/tmp/temp.go  
