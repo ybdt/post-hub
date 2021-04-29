@@ -1,4 +1,4 @@
-#### 能过Defender、360、腾讯，不能过火绒
+#### 能过360、腾讯，不能过Defender、火绒
 
 Kali下安装完go环境后，借助项目https://github.com/hack2fun/BypassAV
 
