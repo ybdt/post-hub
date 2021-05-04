@@ -1,0 +1,20 @@
+https://github.com/Cr4sh/MicroBackdoor
+
+beacon端特点：  
+1、支持32-bit and 64-bit versions of Windows XP, Vista, 7, 8, 8.1, 10, Server 2003, Server 2003 R2, Server 2008, Server 2008 R2, Server 2012, Server 2012 R2, Server 2016 and Server 2019 of any editions, languages and service packs  
+2、dropper使用Microsoft JScript，一旦被查杀，很容易混淆  
+3、会检测系统的代理设置（SOCKS 4, SOCKS 5 or HTTP）
+4、流量使用RSA加密  
+5、文件不落地，存储到注册表值中
+
+服务端：  
+1、使用Python编写，跨平台  
+2、虚拟shell，查看、上传、下载文件  
+3、提供Python API和命令行接口可批量执行命令和脚本
+
+经过测试发现：  
+1、dropper可以静态免杀  
+2、但在执行时会被Defender、360查杀（火绒、腾讯没有查杀），如下图  
+![image](./dynamic.png)  
+3、持久化时会被Defender、360查杀（火绒、腾讯没有查杀），如下图  
+![image](./persistent.png)
