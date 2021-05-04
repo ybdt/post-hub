@@ -15,6 +15,6 @@ beacon端特点：
 经过测试发现：  
 1、dropper可以静态免杀  
 2、但在执行时会被Defender、360查杀（火绒、腾讯没有查杀），如下图  
-![image](./dynamic.png)  
+![image](./pic/dynamic.png)  
 3、持久化时会被Defender、360查杀（火绒、腾讯没有查杀），如下图  
-![image](./persistent.png)
+![image](./pic/persistent.png)
