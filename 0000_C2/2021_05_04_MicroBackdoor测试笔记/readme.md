@@ -37,4 +37,6 @@ pip install pefile
 2、但在执行时会被Defender、360查杀（火绒、腾讯没有查杀），如下图  
 ![image](./pic/dynamic.png)  
 3、持久化时会被Defender、360查杀（火绒、腾讯没有查杀），如下图  
-![image](./pic/persistent.png)
+![image](./pic/persistent.png)  
+
+生成的dropper在xp下运行时，直接双击会没有反应，需要生成debug版本，且在命令行下执行cscript.exe .\droppper.js才能收到反连，但使用收到的反连执行命令会报错“500 internal error”
