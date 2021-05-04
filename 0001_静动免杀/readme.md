@@ -1,7 +1,3 @@
-## CobaltStrike学习：
-公众号谢公子：https://www.anquanke.com/post/id/235251  
-https://github.com/zer0yu/Awesome-CobaltStrike
-
 ## 静态免杀：
 https://github.com/hack2fun/BypassAV  
 https://mp.weixin.qq.com/s/G1hmsDVTO2208Ymlia_ggQ  
