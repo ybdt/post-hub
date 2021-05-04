@@ -1,9 +1,11 @@
-## 通过pyinstaller打包py文件（已失效）：  
+## 通过pyinstaller打包py文件：  
 pip install pyinstaller  
 pyinstaller your_program.py  
 参考链接：  
 https://www.pyinstaller.org/  
-## 2021/05/04更新：  
+上述方法已失效  
+
+2021/05/04更新：  
 pip install pyinstaller安装pyinstaller失败，报错“get_requires_for_build_wheel”  
 查阅资料后发现，可能是最新版的pyinstaller不再支持python2导致的，解决方法，手动安装  
 1、支持python2的最后一个版本是pyinstaller3.6：https://github.com/pyinstaller/pyinstaller/releases/download/v3.6/PyInstaller-3.6.tar.gz  
