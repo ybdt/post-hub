@@ -1,6 +1,6 @@
 ```
 （已失效）
-安装pyinstaller就2步  
+通过pyinstaller打包py文件就2步  
 pip install pyinstaller  
 pyinstaller your_program.py  
 参考链接：  
