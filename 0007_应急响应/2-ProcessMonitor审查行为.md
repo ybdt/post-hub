@@ -12,3 +12,4 @@ QuerySecurityFile
 QueryNameInformationFile
 FileSystemControl
 ```
+4、查看注册表行为
