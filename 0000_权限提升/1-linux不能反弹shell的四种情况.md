@@ -51,7 +51,7 @@ reset
 export SHELL=bash
 export TERM=xterm-256color
 stty rows 54 columns 104
-此时，VPS上的shell为功能基本齐全的shell
+此时，VPS上的shell为全功能的shell
 ```
 
 参考链接：  
