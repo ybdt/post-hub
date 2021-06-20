@@ -11,6 +11,8 @@ sudo apt install mingw-w64-tools mingw-w64-common g++-mingw-w64 gcc-mingw-w64 up
 ```
 x86_64-w64-mingw32-gcc -c bof-net-user.c -o bof-net-user-x64.o
 i686-w64-mingw32-gcc -c bof-net-user.c -o bof-net-user-x86.o
+用户名密码：test123/Test@#123
+这里要注意：32位进程载入32位对象，64位进程载入64位对象
 ```
 CS上线后，直接执行
 ```
