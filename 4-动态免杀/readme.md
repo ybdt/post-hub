@@ -7,6 +7,7 @@ https://lengjibo.github.io/nod32-bypass/#more
 https://uknowsec.cn/posts/notes/Mimikatz%E6%98%8E%E6%96%87%E5%AF%86%E7%A0%81%E6%8A%93%E5%8F%96.html  
 3、添加用户还可以尝试反射型dll注入，参考：  
 https://github.com/lengjibo/NetUser/blob/master/rdi_net_user.cpp  
+https://github.com/bats3c/DarkLoadLibrary/tree/master/DarkLoadLibrary  
 4、对于不能直接提取密码的windows server，可在添加用户后尝试RDP会话劫持实现未授权登录，参考：  
 https://mp.weixin.qq.com/s/GXvz4jXc8IPVQcXkB6L6_w  
 5、借助darkarmour，可参考：  
