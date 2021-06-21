@@ -6,3 +6,5 @@ https://github.com/hack2fun/BypassAV
 https://mp.weixin.qq.com/s/G1hmsDVTO2208Ymlia_ggQ  
 https://github.com/An0ny-m0us/DesertFox  
 知道创宇公司：https://github.com/knownsec/shellcodeloader  
+
+Kill杀软：https://github.com/Yaxser/Backstab + https://github.com/secretsquirrel/SigThief
