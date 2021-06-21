@@ -1,6 +1,6 @@
 # 结论
 
-## 其他思路记录
+## 待尝试思路记录
 1、Mimikatz还可以尝试分离免杀，参考：  
 https://github.com/lengjibo/RedTeamTools/tree/master/windows/mimikatz_bypassAV  
 https://github.com/lengjibo/RedTeamTools/tree/master/windows/mimikatz_bypass  
