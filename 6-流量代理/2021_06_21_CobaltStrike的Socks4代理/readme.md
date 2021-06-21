@@ -1,0 +1,1 @@
+可通过CS开启socks4代理服务端，windows下代理客户端使用proxifier，linux下代理客户端使用proxychains
