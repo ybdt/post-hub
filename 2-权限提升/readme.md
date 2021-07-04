@@ -1,6 +1,5 @@
-参考链接：  
-https://github.com/uknowsec/SweetPotato  
-https://github.com/uknowsec/getSystem
+参见[http://github.com/ybdt/exp-hub](http://github.com/ybdt/exp-hub)中复现的提权漏洞
+
 
 ```
 1、polkadots-CVE-2021-3560
@@ -14,3 +13,7 @@ Affected Distributions:
 
 https://github.com/swapravo/polkadots
 ```
+
+参考链接：  
+https://github.com/uknowsec/SweetPotato  
+https://github.com/uknowsec/getSystem
