@@ -1,3 +1,5 @@
+[1-hacking8的在线提权检测](https://i.hacking8.com/tiquan/)
+
 参见[http://github.com/ybdt/exp-hub](http://github.com/ybdt/exp-hub)中复现的提权漏洞
 
 
