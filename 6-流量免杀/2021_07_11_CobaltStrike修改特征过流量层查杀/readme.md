@@ -21,4 +21,8 @@ keytool -list -v -keystore ./cobaltstrike.store#默认密码123456
 可以看到，不再有字符串"Cobalt Strike"  
 同样，使用nmap扫描后，不再有字符串"Cobalt Strike"  
 此处就不截图了  
-### 3、使用Malleable C2 Profile伪造C2标识
+### 3、使用Malleable C2 Profile伪造标识
+具体见bing-c2-4.2.profile  
+使用配置文件后，burp访问https beacon，会返回如下标识  
+![image](./pic/2.png)  
+### 4、配置域前置
