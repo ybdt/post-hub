@@ -26,3 +26,10 @@ keytool -list -v -keystore ./cobaltstrike.store#默认密码123456
 使用配置文件后，burp访问https beacon，会返回如下标识  
 ![image](./pic/2.png)  
 ### 4、配置域前置
+
+### 参考链接：  
+https://paper.seebug.org/1349/  
+https://leaderzhang.com/archives/cobaltstrike  
+https://lengjibo.github.io/malleable/  
+https://www.cobaltstrike.com/help-malleable-c2  
+https://github.com/threatexpress/malleable-c2  
