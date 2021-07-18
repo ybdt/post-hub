@@ -1,3 +1,4 @@
+测试的杀软：360全家桶、腾讯电脑管家、Windows Defender、火绒
 # 0x00 杀软测试结论
 能过360全家桶、腾讯电脑管家  
 不能过Windows Defender、火绒  
