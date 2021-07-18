@@ -16,7 +16,7 @@ CS导入插件后，生成x64的shellcode，实际上不会生成exe（可能是
 cp /tmp/temp.go /mnt/Desktop  
 go build temp.go  
 
-go build -ldflags "-H windowsgui" DesertFox.go#无命令行窗口，隐藏执行
+go build -ldflags "-H windowsgui" DesertFox.go#无命令行窗口隐藏执行
 ```
 3、CS导入插件后，Attacks->BypassAV，勾选x64的shellcode，能够生成exe  
 4、拷贝到宿主机后，使用Defender扫描，未检测为病毒，但执行的时候会提示病毒  
