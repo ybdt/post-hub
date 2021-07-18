@@ -9,7 +9,7 @@
 火绒关闭：用户体验  
 Windows Defender关闭：自动提交样本  
 # 0x02 杀软测试过程
-1、Kali下安装go环境  
+1、Kali下安装go环境，参考：https://blog.csdn.net/Soda_199/article/details/107021540  
 2、下载项目：https://github.com/hack2fun/BypassAV  
 3、CS导入插件后，勾选x64的shellcode，能够生成exe  
 4、拷贝到宿主机后，使用Defender扫描（关闭可疑文件自动上传），未检测为病毒，但执行的时候会提示病毒  
