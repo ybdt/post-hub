@@ -1,5 +1,6 @@
+CS版本：Cobalt Strike 4.2
+
 # 0x00 shellcode上线测试
-CS版本：Cobalt Strike 4.2  
 Attacks->Packages->Payload Generator（选择之前创建的监听器，输出C格式，勾选x64）  
 生成的代码如下
 ```
