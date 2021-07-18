@@ -11,9 +11,9 @@ Windows Defender关闭：自动提交样本
 # 0x02 杀软测试过程
 1、Kali下安装go环境，参考：https://blog.csdn.net/Soda_199/article/details/107021540  
 2、下载项目：https://github.com/hack2fun/BypassAV  
-3、CS导入插件后，勾选x64的shellcode，能够生成exe  
-4、拷贝到宿主机后，使用Defender扫描（关闭可疑文件自动上传），未检测为病毒，但执行的时候会提示病毒  
-5、拷贝到装有360、火绒、腾讯的虚拟机下测试（），只有火绒检测为病毒，如下图  
+3、CS导入插件后，Attacks->BypassAV，勾选x64的shellcode，能够生成exe  
+4、拷贝到宿主机后，使用Defender扫描，未检测为病毒，但执行的时候会提示病毒  
+5、拷贝到装有360、火绒、腾讯的虚拟机下测试，只有火绒检测为病毒，如下图  
 ![image](./pic/1.png)  
 6、关闭火绒保留360、腾讯，执行shellcode，成功上线CS，如下图  
 ![image](./pic/2.png)  
