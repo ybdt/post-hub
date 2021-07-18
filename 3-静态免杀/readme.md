@@ -2,7 +2,8 @@
 ### 1、loader + shellcode
 1、c语言实现的loader  
 2、go语言实现的loader  
-3、loader中实现睡眠函数
+3、loader中实现睡眠函数  
+4、生成64位shellcode
 
 ## 待尝试思路记录：
 DNS分离免杀：https://mp.weixin.qq.com/s/bM_rsh8KxXwwyEkbHRTKsw  
