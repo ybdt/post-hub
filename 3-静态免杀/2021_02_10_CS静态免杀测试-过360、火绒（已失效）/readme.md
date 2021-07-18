@@ -1,6 +1,5 @@
 # 0x00 shellcode测试
-Cobalt Strike 4.2  
-创建监听器beacon http  
+CS版本：Cobalt Strike 4.2  
 Attacks->Packages->Payload Generator（选择之前创建的监听器，输出C格式，勾选x64）  
 生成的代码如下
 ```
@@ -20,7 +19,7 @@ int main() {
 ```
 下载并安装VS2019，安装时勾选C++和windows这2类，创建windows控制台项目
 
-直接在VS2019下编译会有类型匹配问题，进行强制类型转换的修改，能成功编译的代码如下
+直接在VS2019下编译会有类型匹配问题，需要对VirtualAlloc返回的值进行强制类型转换，能成功编译的代码如下
 ```
 #include <windows.h>
 #include <stdio.h>
