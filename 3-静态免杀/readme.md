@@ -3,6 +3,9 @@
 1、c语言实现的loader  
 2、go语言实现的loader  
 3、loader中实现睡眠函数  
+```
+c语言中的睡眠函数：Sleep(1000)
+```
 4、（多篇文章提到）生成64位的shellcode比32位shellcode免杀效果更好一些
 
 ## 待尝试思路记录：
