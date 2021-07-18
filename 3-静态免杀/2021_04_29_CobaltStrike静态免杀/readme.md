@@ -1,6 +1,7 @@
 # 0x00 简介
 原理：go语言实现的loader  
 测试的杀软：360全家桶、腾讯电脑管家、火绒、Windows Defender  
+CS版本：Cobalt Strike 4.2  
 
 # 0x00 结论
 能过360全家桶、腾讯电脑管家  
