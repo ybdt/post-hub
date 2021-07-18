@@ -1,5 +1,5 @@
 CS版本：Cobalt Strike 4.2  
-测试的杀软：360安全卫士12、360杀毒、火绒
+测试的杀软：360安全卫士v12、360杀毒、火绒
 
 # 0x00 shellcode上线测试
 Attacks->Packages->Payload Generator（选择之前创建的监听器，输出C格式，勾选x64）  
