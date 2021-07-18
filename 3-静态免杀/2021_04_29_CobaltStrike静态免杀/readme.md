@@ -1,14 +1,19 @@
-测试的杀软：360全家桶、腾讯电脑管家、火绒、Windows Defender
-# 0x00 杀软测试结论
+# 0x00 简介
+原理：go语言实现的loader  
+测试的杀软：360全家桶、腾讯电脑管家、火绒、Windows Defender  
+
+# 0x00 结论
 能过360全家桶、腾讯电脑管家  
 不能过Windows Defender、火绒  
-# 0x01 杀软测试注意
+
+# 0x01 注意
 腾讯电脑管家关闭：自动举报  
 360杀毒关闭：用户体验、程序错误、可疑文件  
 360安全卫士关闭：用户体验、云安全、网址云安全  
 火绒关闭：用户体验  
 Windows Defender关闭：自动提交样本  
-# 0x02 杀软测试过程
+
+# 0x02 过程
 1、Kali下安装go环境，参考：https://blog.csdn.net/Soda_199/article/details/107021540  
 2、下载项目：https://github.com/hack2fun/BypassAV  
 ```
