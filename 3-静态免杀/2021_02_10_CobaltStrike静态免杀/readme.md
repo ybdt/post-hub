@@ -2,6 +2,7 @@
 原理：c语言实现的loader  
 测试的杀软：360全家桶、火绒  
 CS版本：Cobalt Strike 4.2  
+Metasploit：暂未测试
 
 # 0x00 结论
 能过360全家桶、腾讯电脑管家  
