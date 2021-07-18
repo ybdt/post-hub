@@ -44,7 +44,7 @@ int main() {
 ![image](./pic/0.png)
 
 # 0x01 shellcode免杀上线
-使用如下C代码，对shellcode进行简单加密（每个字节和数字1进行异或）
+使用如下C代码，对shellcode进行异或加密（每个字节和数字1进行异或）
 ```
 #include <stdio.h>
 
@@ -70,7 +70,7 @@ int main() {
     return 0;
 }
 ```
-拷贝上述输出的shellcode到下述代码的字符数组中
+拷贝上述输出的shellcode到下述代码的字符数组中，下述代码会在内存中进行异或解密并执行
 ```
 #include <stdio.h>
 #include <windows.h>
