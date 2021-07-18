@@ -1,4 +1,4 @@
-# 0x00 shellcode测试
+# 0x00 shellcode上线
 CS版本：Cobalt Strike 4.2  
 Attacks->Packages->Payload Generator（选择之前创建的监听器，输出C格式，勾选x64）  
 生成的代码如下
@@ -42,7 +42,7 @@ int main() {
 但使用火绒扫描后，提示病毒，如下图  
 ![image](./pic/0.png)
 
-# 0x01 shellcode免杀
+# 0x01 shellcode免杀上线
 使用如下C代码，对shellcode进行简单加密（每个字节和数字1进行异或）
 ```
 #include <stdio.h>
