@@ -1,4 +1,5 @@
-CS版本：Cobalt Strike 4.2
+CS版本：Cobalt Strike 4.2  
+测试的杀软：360安全卫士12、360杀毒、火绒
 
 # 0x00 shellcode上线测试
 Attacks->Packages->Payload Generator（选择之前创建的监听器，输出C格式，勾选x64）  
@@ -87,7 +88,7 @@ int main() {
 }
 ```
 编译执行后，能成功连接到CS  
-拷贝到windows server 2008下  
+拷贝到windows server 2008 R2下  
 360安全卫士、360杀毒、火绒均未提示  
 扫描后也未提示，如下图  
 ![image](./pic/1.png)  
