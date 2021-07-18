@@ -1,5 +1,8 @@
 ## CobaltStrike、Metasploit静态免杀思路
-### 1、loader + shellcode，其中loader可以是c语言实现的、可以是go语言实现的
+### 1、loader + shellcode
+1、c语言实现的loader  
+2、go语言实现的loader  
+3、loader中实现睡眠函数
 
 ## 待尝试思路记录：
 DNS分离免杀：https://mp.weixin.qq.com/s/bM_rsh8KxXwwyEkbHRTKsw  
