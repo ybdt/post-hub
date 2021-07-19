@@ -2,9 +2,12 @@
 ### 1、loader + shellcode
 1.1、c语言实现的loader  
 1.2、go语言实现的loader  
-1.3、loader中实现睡眠函数  
+1.3、loader变形  
 ```
-c语言中的睡眠函数：Sleep(1000)
+异或加密
+睡眠函数，C语言睡眠函数：Sleep(1000)
+base64编码
+gzip压缩
 ```
 1.4、（多篇文章提到）生成64位的shellcode比32位shellcode免杀效果更好一些
 
