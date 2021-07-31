@@ -13,10 +13,11 @@ keytool -list -v -keystore ./cobaltstrike.store
 ![image](./pic/0.png)  
 使用nmap扫描时可看到此特征，如下图  
 ![image](./pic/1.png)  
+执行如下命令重新生成cobaltstrike.store后  
 ```
 keytool -keystore cobaltstrike.store -storepass 123456 -keypass 123456 -genkey -keyalg RSA -alias xxx.com -dname "CN=XX, OU=xxx.com, O=Xx, L=Xx, ST=Xx, C=XXX"
 ```
-重新生成cobaltstrike.store后，再次执行
+再次执行  
 ```
 keytool -list -v -keystore ./cobaltstrike.store#默认密码123456
 ```
