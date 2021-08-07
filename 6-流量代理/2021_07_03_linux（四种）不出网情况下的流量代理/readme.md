@@ -1,4 +1,4 @@
-1、无反弹命令的检查方法
+1、检查存在哪些反弹shell的命令
 ```
 受害机上执行：
 whereis bash nc python php exec perl ruby telnet
