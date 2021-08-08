@@ -67,4 +67,5 @@ chmod u+x /tmp/socat
 ```
 
 参考链接：  
-https://www.freebuf.com/vuls/211847.html
+https://www.freebuf.com/vuls/211847.html  
+https://saucer-man.com/information_security/233.html#cl-1  
