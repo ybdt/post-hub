@@ -1,4 +1,4 @@
-默认情况下：加密后的密码保存在C:\Users\username\AppData\Roaming\Remoting\mRemoteNG\confCons.xml  
+默认情况下：加密后的密码保存在C:\Users\username\AppData\Roaming\mRemoteNG\confCons.xml  
 
 密码通过AES加密，默认加密密码为：mR3m  
 
