@@ -9,3 +9,7 @@ pip3.exe install pycryptodomex
 
 如下图  
 ![image](./pic/1.png)  
+
+参考链接：  
+https://exexute.github.io/2019/05/08/HTB-windows-Bastion/  
+https://github.com/kmahyyg/mremoteng-decrypt  
