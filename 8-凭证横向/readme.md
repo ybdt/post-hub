@@ -1,9 +1,15 @@
-### 已做事项：  
-1、mRemoteNG密码提取  
+### 已做事项：
+1、mRemoteNG  
+2、Navicat  
+3、Xmanager（Xshell,Xftp）  
+4、TeamViewer  
+5、FileZilla  
+6、Foxmail  
+7、RealVNC  
+8、TortoiseSVN  
+9、WinSCP  
+10、Chrome  
+11、RDCMan  
 
-### 待做事项：  
-1、Foxmail密码提取  
-2、Chrome浏览器密码提取  
-3、QQ浏览器密码提取  
-4、Xshell密码提取  
-5、Teamviewer密码抓取  
+### 待做事项：
+1、QQ浏览器密码提取  
