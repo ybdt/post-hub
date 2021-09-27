@@ -2,7 +2,7 @@
 
 密码通过AES中的GCM模式加密，默认密钥为：mR3m  
 
-经测试，通过在线AES解密工具选择GCM模式也无法解密，可使用mRemoteNG_decrypt.py解密  
+经测试，通过在线AES解密工具选择GCM模式也无法解密，可使用mRemoteNG_decrypt.py解密（目前测试，对于配置文件版本2.6可以，2.7不行，版本可从配置文件中看到）  
 
 如下图  
 ![image](./pic/mRemoteNG.png)  
