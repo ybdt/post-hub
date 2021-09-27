@@ -5,7 +5,7 @@
 经测试，通过在线AES解密工具选择GCM模式也无法解密，可使用mRemoteNG_decrypt.py解密  
 
 如下图  
-![image](./pic/1.png)  
+![image](./pic/mRemoteNG.png)  
 
 参考链接：  
 https://exexute.github.io/2019/05/08/HTB-windows-Bastion/  
