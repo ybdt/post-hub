@@ -1,8 +1,9 @@
-参考连接：https://github.com/Twi1ight/CSAgent
+参考连接：https://github.com/Twi1ight/CSAgent  
 
+步骤：  
 1、解压下载下来的CSAgent.zip  
-2、替换文件夹中的cobaltstrike、teamserver、agscript、c2lint、cobaltstrike.bat文件中的解密key，目前内置的key为4.3版本  
-3、接下来正常操作即可  
+2、替换文件夹中cobaltstrike、teamserver、agscript、c2lint、cobaltstrike.bat（linux下不需要这个文件）文件中的解密key，目前内置的key为4.3版本  
+3、修改后分别拷贝到服务端和客户端，覆盖原文件  
 
 ```
 以下是各个版本的官方加密key：
