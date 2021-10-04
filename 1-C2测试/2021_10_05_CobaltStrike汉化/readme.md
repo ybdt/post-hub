@@ -1,4 +1,4 @@
-参考连接：https://github.com/Twi1ight/CSAgent  
+参考连接：[https://github.com/Twi1ight/CSAgent](https://github.com/Twi1ight/CSAgent)及issues  
 
 步骤：  
 1、解压下载下来的CSAgent.zip  
