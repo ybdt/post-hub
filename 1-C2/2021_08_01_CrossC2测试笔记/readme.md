@@ -15,6 +15,6 @@ CrossC2使用版本v3.0.1-dev
 
 7、登录CS，选择Cobalt Strike->脚本管理器，加载./Plugins/CrossC2/CrossC2.cna和Plugins/CrossC2/CrossC2Kit/CrossC2Kit_Loader.cna  
 
-（注意，此时不能使用c2profile及CDN）  
+（注意，当前方法不能使用C2Profile及CDN）  
 8、使用CrossC2生成linux下payload，只需指定监听器和输出路径，其他默认即可，会生成2个文件，如CrossC2和CrossC2.lib，执行后可上线，如下图  
 ![image](./pic/1.png)  
