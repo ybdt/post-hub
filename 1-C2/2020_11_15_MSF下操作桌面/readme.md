@@ -1,3 +1,4 @@
+选择windows/x64/vncinject/reverse_tcp
 设置AUTOVNC为false，run之后，再开启vncviewer
 
 当目标主机能通外网时  
