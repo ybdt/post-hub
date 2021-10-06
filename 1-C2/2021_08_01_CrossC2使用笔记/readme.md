@@ -6,8 +6,8 @@ https://gloxec.github.io/CrossC2/zh_cn/protocol/
 
 CrossC2使用版本v3.0.1-dev
 
-### 1 不使用profile及CDN：  
-1、下载CrossC2-GithubBot-2021-09-13.cna、CrossC2Kit-GithubBot-2021-09-13.zip、genCrossC2.Linux  
+### 1、不使用profile及CDN：  
+1.下载CrossC2-GithubBot-2021-09-13.cna、CrossC2Kit-GithubBot-2021-09-13.zip、genCrossC2.Linux  
 
 2.将CrossC2Kit-GithubBot-2021-09-13.zip内的文件夹CrossC2Kit解压出来，并重命名CrossC2-GithubBot-2021-09-13.cna为CrossC2.cna  
 
