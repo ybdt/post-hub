@@ -2,6 +2,7 @@
 https://github.com/gloxec/CrossC2/blob/cs4.1/README_zh.md  
 https://hack-for.fun/67f2.html  
 https://gloxec.github.io/CrossC2/zh_cn/usage/cna.html  
+https://gloxec.github.io/CrossC2/zh_cn/protocol/  
 
 CrossC2使用版本v3.0.1-dev
 
