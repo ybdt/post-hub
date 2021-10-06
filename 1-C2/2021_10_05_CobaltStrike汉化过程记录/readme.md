@@ -1,3 +1,5 @@
+### 汉化后，启动CS载入界面时，需要等待较长时间，改用未汉化版！！！
+
 参考连接：[https://github.com/Twi1ight/CSAgent](https://github.com/Twi1ight/CSAgent)及issues  
 
 步骤：  
