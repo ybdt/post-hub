@@ -25,8 +25,7 @@ CrossC2使用版本v3.0.1-dev
 ![image](./pic/1.png)  
 
 ### 2、使用profile但不用CDN：
-1.profile中的http-get和http-post部分需要和c2profile.c中相对应，可以使用官方提供的profile：[https://github.com/gloxec/CrossC2/blob/cs4.1/protocol_demo/https.profile](https://github.com/gloxec/CrossC2/blob/cs4.1/protocol_demo/https.profile)，并编译官方提供的c源码：[https://github.com/gloxec/CrossC2/blob/cs4.1/protocol_demo/c2profile.c](https://github.com/gloxec/CrossC2/blob/cs4.1/protocol_demo/c2profile.c)  
-2.建议将https.profile和c2profile.c中的www.google.com改为www.baidu.com  
-3.然后编译：gcc c2profile.c -fPIC -shared -o lib_rebind_test.so  
+1.用官方提供的profile：[https://github.com/gloxec/CrossC2/blob/cs4.1/protocol_demo/https.profile](https://github.com/gloxec/CrossC2/blob/cs4.1/protocol_demo/https.profile)替换自己profile中http-get和http-post部分（我这边将https.profile和c2profile.c中的www.google.com改为www.baidu.com），并编译官方提供的c源码：[https://github.com/gloxec/CrossC2/blob/cs4.1/protocol_demo/c2profile.c](https://github.com/gloxec/CrossC2/blob/cs4.1/protocol_demo/c2profile.c)  
+2.然后编译：gcc c2profile.c -fPIC -shared -o lib_rebind_test.so  
 生成payload时，指定rebind_dynamic_lib，其他步骤同上即可，成功上线后如下图  
 ![image](./pic/2.png)  
