@@ -7,6 +7,5 @@ https://mp.weixin.qq.com/s?__biz=MzI5MDU1NDk2MA==&mid=2247496969&idx=1&sn=eeda79
 https://mp.weixin.qq.com/s/-DqGsjqgxC5MUf4poqC5XQ
 
 ## CobaltStrike学习：
-公众号谢公子：https://www.anquanke.com/post/id/235251  
 https://github.com/zer0yu/Awesome-CobaltStrike  
 https://wbglil.gitbook.io/cobalt-strike/cobalt-strikemo-kuai-jie-shao
