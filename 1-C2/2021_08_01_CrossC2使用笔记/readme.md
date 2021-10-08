@@ -11,7 +11,7 @@ CrossC2使用版本v3.0.1-dev
 
 2.将CrossC2Kit-GithubBot-2021-09-13.zip内的文件夹CrossC2Kit解压出来，并重命名CrossC2-GithubBot-2021-09-13.cna为CrossC2.cna  
 
-3.将CrossC2Kit、CrossC2.cna、genCrossC2.Linux放到CobaltStrike客户端根目录下插件目录下，我这边创建目录Plugins后，将所有插件统一放到Plugins/下，创建目录Plugins/CrossC2，并将3个文件放到Plugins/CrossC2/下  
+3.将CrossC2Kit、CrossC2.cna、genCrossC2.Linux放到CobaltStrike客户端根目录下，我这边在客户端根目录下创建目录Plugins/CrossC2后，并将3个文件放到Plugins/CrossC2/下  
 
 4.修改CrossC2.cna中$CC2_PATH的值为：/xx/xx/Plugins/CrossC2/，$CC2_BIN的值为：genCrossC2.Linux  
 
