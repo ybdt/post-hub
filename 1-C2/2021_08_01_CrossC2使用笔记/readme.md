@@ -1,9 +1,3 @@
-参考链接：  
-https://github.com/gloxec/CrossC2/blob/cs4.1/README_zh.md  
-https://hack-for.fun/67f2.html  
-https://gloxec.github.io/CrossC2/zh_cn/usage/cna.html  
-https://gloxec.github.io/CrossC2/zh_cn/protocol/  
-
 CrossC2使用版本v3.0.1-dev
 
 # 1、不使用profile：
@@ -29,3 +23,9 @@ CrossC2使用版本v3.0.1-dev
 2.然后编译：gcc c2profile.c -fPIC -shared -o lib_rebind_test.so  
 生成payload时，指定rebind_dynamic_lib，其他步骤同上即可，成功上线后如下图  
 ![image](./pic/2.png)  
+
+# 参考链接：  
+https://github.com/gloxec/CrossC2/blob/cs4.1/README_zh.md  
+https://hack-for.fun/67f2.html  
+https://gloxec.github.io/CrossC2/zh_cn/usage/cna.html  
+https://gloxec.github.io/CrossC2/zh_cn/protocol/  
