@@ -1,12 +1,15 @@
+# 缺点
+需要system权限
+
+# 优点
+Defender失效后，没有任何反应，适合高端钓鱼
+
 # 基本原理
 去掉MsMpEng.exe（Defender进程）的token的privilege和integrity，由于没有对这个行为做限制，只要system权限都可以
 
 # 参考链接
 https://elastic.github.io/security-research/whitepapers/2022/02/02.sandboxing-antimalware-products-for-fun-and-profit/article/  
 https://github.com/pwn1sher/KillDefender
-
-# 先决条件
-需要system权限
 
 # 复现背景
 测试时间：2022/02/07  
