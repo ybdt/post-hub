@@ -30,7 +30,7 @@ sudo /usr/bin/vmhgfs-fuse .host:/ /mnt/ -o subtype=vmhgfs-fuse,allow_other,nonem
 将“sudo /usr/bin/vmhgfs-fuse .host:/ /mnt/ -o subtype=vmhgfs-fuse,allow_other”添加到~/.zshrc（注意最新版是ZSH）
 
 5、终端中的字体非常小，太累眼睛
-Settings（设置）->Appearance（外观）->Fonts（字体）->DPI改为150
+Settings（设置）->Appearance（外观）->Fonts（字体）->DPI改为130
 
 6、安装中文输入法
 sudo apt install fcitx fcitx-googlepinyin
