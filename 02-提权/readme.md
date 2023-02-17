@@ -5,8 +5,15 @@ hacking8的Windows提权在线辅助工具：https://i.hacking8.com/tiquan/
 Kernelhub项目：https://github.com/Ascotbe/Kernelhub
 
 windows-kernel-exploits项目：https://github.com/SecWiki/windows-kernel-exploits
-```
 
+https://github.com/uknowsec/SweetPotato
+
+
+场景一
+土豆提权家族可参考：https://forum.butian.net/share/860
+Microsoft Windows Server 2016 Standard
+10.0.14393 暂缺 Build 14393
+```
 
 ### Linux提权
 ```
