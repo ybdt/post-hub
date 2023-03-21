@@ -1,5 +1,5 @@
-# 0x01 CS服务端搭建
-将CS4.5安装包上传到VPS上，执行如下命令即可启动，需要注意，IP地址不能是0.0.0.0
+# 0x01 CS服务端启动
+将CS4.5文件夹上传到VPS上，执行如下命令即可启动，需要注意，IP地址不能是0.0.0.0
 ```
 ./teamserver 192.168.0.125 password
 ```
@@ -17,18 +17,18 @@
 ### 步骤1 注册一个域名
 有的文章提到使用www.freenom.com平台进行注册，我这边测试从freenom注册免费域名挺费劲的，试了几次都没成功，建议从namesilo购买一个域名，选一个不那么大众化的，每年0.99$
 ### 步骤2 cdn平台配置dns解析
-此处需要大量图文说明，参见文章[https://xz.aliyun.com/t/11099](https://xz.aliyun.com/t/11099)中的”CDN平台配置DNS解析”部分：https://xz.aliyun.com/t/11099#toc-2
+此处需要图文说明，参见文章[https://xz.aliyun.com/t/11099](https://xz.aliyun.com/t/11099)中的”CDN平台配置DNS解析”部分，地址：https://xz.aliyun.com/t/11099#toc-2
 ```
 添加DNS记录时如下
 Name：ybdt，IPv4 address：服务器 IP
 ```
 ### 步骤3 CDN平台创建证书
-此处需要大量图文说明，参见文章[https://xz.aliyun.com/t/11099](https://xz.aliyun.com/t/11099)中的”CDN平台创建证书”部分：https://xz.aliyun.com/t/11099#toc-3
+此处需要图文说明，参见文章[https://xz.aliyun.com/t/11099](https://xz.aliyun.com/t/11099)中的”CDN平台创建证书”部分，地址：https://xz.aliyun.com/t/11099#toc-3
 ```
 要注意，创建时要保存证书和私钥，不然后面没法再看到私钥
 ```
 ### 步骤4 CDN平台禁用缓存
-此处需要大量图文说明，参见文章[https://xz.aliyun.com/t/11099](https://xz.aliyun.com/t/11099)中的”CDN平台禁用缓存”部分：https://xz.aliyun.com/t/11099#toc-4
+此处需要图文说明，参见文章[https://xz.aliyun.com/t/11099](https://xz.aliyun.com/t/11099)中的”CDN平台禁用缓存”部分，地址：https://xz.aliyun.com/t/11099#toc-4
 ### 步骤5 生成CS证书
 进入vps中的cs文件夹中，创建两个文件：server.pem（文件中贴入上面的源证书）和server.key（文件中贴入上面的私钥），然后生成新的cobaltstrike证书，如果原先的cobaltstrike文件夹内有默认的.store证书，需要先删除掉默认的
 ```
@@ -97,7 +97,7 @@ http-post {
 
 ```
 ### 步骤7 创建监听器
-此处参见文章[https://xz.aliyun.com/t/11099](https://xz.aliyun.com/t/11099)中的”启动teamserver”部分：https://xz.aliyun.com/t/11099#toc-9
+此处需要图文说明，参见文章[https://xz.aliyun.com/t/11099](https://xz.aliyun.com/t/11099)中的”启动teamserver”部分，地址：https://xz.aliyun.com/t/11099#toc-9
 ```
 需要注意，CloudFlare CDN免费支持的端口如下
 http:
@@ -113,7 +113,7 @@ https:
 ```
 
 # 0x04 CS上线微信提醒
-此处参见文章[https://xz.aliyun.com/t/10698](https://xz.aliyun.com/t/10698)中的”微信单人提醒”部分：https://xz.aliyun.com/t/11099#toc-9
+此处需要图文说明，参见文章[https://xz.aliyun.com/t/10698](https://xz.aliyun.com/t/10698)中的”微信单人提醒”部分，地址：https://xz.aliyun.com/t/11099#toc-9
 
 不过有2处需要修改：  
 01、vps会提示需要转发x11请求，解决办法：启动时需要加一个参数-Djava.awt.headless=true，修改后如下
