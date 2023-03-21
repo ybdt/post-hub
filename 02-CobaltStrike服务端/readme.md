@@ -5,28 +5,31 @@
 ```
 
 # 0x02 CS服务端特征去除
-## 01 修改teamserver默认端口
+### 01 修改teamserver默认端口
 打开文件teamserver，将默认的50050端口改为其他端口
-## 02 修改teamserver默认指纹信息
-不需要修改teamserver中的cobalt strike信息，阅读代码可知，当没有证书的时候会创建带有cobalt strike信息的证书，下面我们会创建自己的证书，就不需要修改teamserver中的cobalt strike信息
+### 02 修改teamserver默认指纹信息
+正常情况使用nmap扫描时可看到此特征，如下图  
+![image](./pic/02.png)  
+阅读代码可知，当没有证书的时候会创建带有cobalt strike信息的证书，有证书的话，则会使用证书中的信息，下面我们会创建自己的证书，就不需要修改teamserver中的cobalt strike信息
+
 # 0x03 CS隐藏真实IP
 思路：基于CDN隐藏真实IP
-## 步骤1 注册一个域名
+### 步骤1 注册一个域名
 有的文章提到使用www.freenom.com平台进行注册，我这边测试从freenom注册免费域名挺费劲的，试了几次都没成功，建议从namesilo购买一个域名，选一个不那么大众化的，每年0.99$
-## 步骤2 cdn平台配置dns解析
+### 步骤2 cdn平台配置dns解析
 此处需要大量图文说明，参见文章(https://xz.aliyun.com/t/11099)[https://xz.aliyun.com/t/11099]中的”CDN平台配置DNS解析”部分：https://xz.aliyun.com/t/11099#toc-2
 ```
 添加DNS记录时如下
 Name：ybdt，IPv4 address：服务器 IP
 ```
-## 步骤3 CDN平台创建证书
+### 步骤3 CDN平台创建证书
 此处需要大量图文说明，参见文章(https://xz.aliyun.com/t/11099)[https://xz.aliyun.com/t/11099]中的”CDN平台创建证书”部分：https://xz.aliyun.com/t/11099#toc-3
 ```
 要注意，创建时要保存证书和私钥，不然后面没法再看到私钥
 ```
-## 步骤4 CDN平台禁用缓存
+### 步骤4 CDN平台禁用缓存
 此处需要大量图文说明，参见文章(https://xz.aliyun.com/t/11099)[https://xz.aliyun.com/t/11099]中的”CDN平台禁用缓存”部分：https://xz.aliyun.com/t/11099#toc-4
-## 步骤5 生成CS证书
+### 步骤5 生成CS证书
 进入vps中的cs文件夹中，创建两个文件：server.pem（文件中贴入上面的源证书）和server.key（文件中贴入上面的私钥），然后生成新的cobaltstrike证书，如果原先的cobaltstrike文件夹内有默认的.store证书，需要先删除掉默认的
 ```
 openssl pkcs12 -export -in server.pem -inkey server.key -out cfcert.p12 -name cloudflare_cert -passout pass:123456
@@ -37,7 +40,7 @@ openssl pkcs12 -export -in server.pem -inkey server.key -out cfcert.p12 -name cl
 ```
 keytool -importkeystore -deststorepass 123456 -destkeypass 123456 -destkeystore cfcert.store -srckeystore cfcert.p12 -srcstoretype PKCS12 -srcstorepass 123456 -alias cloudflare_cert
 ```
-## 步骤6 创建profile文件
+### 步骤6 创建profile文件
 ```
 set sleeptime "3000";
 
@@ -93,7 +96,7 @@ http-post {
 }
 
 ```
-## 步骤7 创建监听器
+### 步骤7 创建监听器
 此处参见文章(https://xz.aliyun.com/t/11099)[https://xz.aliyun.com/t/11099]中的”启动teamserver”部分：https://xz.aliyun.com/t/11099#toc-9
 ```
 需要注意，CloudFlare CDN免费支持的端口如下
@@ -102,7 +105,7 @@ http:
 https:
 443、2053、2083、2087、2096、8443
 ```
-## 步骤8 上线测试
+### 步骤8 上线测试
 上线后，我这边wireshark抓包，抓到的ip查询后发现是微软云（可能是cloudflare的节点在微软云上，或其他原因），如下图  
 ![image](./pic/01.png)
 ```
