@@ -8,29 +8,125 @@
 ## 01 修改teamserver默认端口
 打开文件teamserver，将默认的50050端口改为其他端口
 ## 02 修改teamserver默认指纹信息
-打开文件teamserver，默认的是cobalt strike信息
-```
-CN=Major Cobalt Strike, OU=AdvancedPenTesting, O=cobaltstrike, L=Somewhere, S=Cyberspace, C=Earth
-```
-此处的信息在SSL证书中可以看到，需要修改一下，可改为其他内容
-```
-CN=baidu, OU=baidu, O=baidu, L=baidu, S=baidu, C=baidu
-
-或者自定义完整的内容，国家、城市等信息
-```
-
+不需要修改teamserver中的cobalt strike信息，阅读代码可知，当没有证书的时候会创建带有cobalt strike信息的证书，下面我们会创建自己的证书，就不需要修改teamserver中的cobalt strike信息
 # 0x03 CS隐藏真实IP
 思路：基于CDN隐藏真实IP
 ## 步骤1 注册一个域名
 有的文章提到使用www.freenom.com平台进行注册，我这边测试从freenom注册免费域名挺费劲的，试了几次都没成功，建议从namesilo购买一个域名，选一个不那么大众化的，每年0.99$
 ## 步骤2 cdn平台配置dns解析
-域名注册完成后先不要解析，开始cdn平台的配置，cdn采用cloudfalre（毕竟它可以免费），地址：(https://dash.cloudflare.com/)[https://dash.cloudflare.com/]，没有账号的需要注册一下  
-进入cloudflare平台后，点击左侧的网站，然后添加一个域名，这里添加的域名就是namesilo注册的域名  
-![image](./pic/01.png)  
-站点添加完成后，点击站点进去，在左侧DNS中添加记录  
-![image](./pic/02.png)  
-添加完成后如果出现下面这样的告警，就代表在namesilo平台中还没有修改ns记录，需要去将ns记录修改为cdn平台的  
-![image](./pic/03.png)  
-进入namesilo平台修改ns记录，这里要填写的ns名称是cdn平台给分配的，参见上图，namesilo改好记录后，再到cdn平台上点击上图的“检查名称服务器”即可更新完成，此时再去解析域名、ping域名，都会成功返回到cdn的ip地址
+此处需要大量图文说明，参见文章(https://xz.aliyun.com/t/11099)[https://xz.aliyun.com/t/11099]中的”CDN平台配置DNS解析”部分：https://xz.aliyun.com/t/11099#toc-2
+```
+添加DNS记录时如下
+Name：ybdt，IPv4 address：服务器 IP
+```
+## 步骤3 CDN平台创建证书
+此处需要大量图文说明，参见文章(https://xz.aliyun.com/t/11099)[https://xz.aliyun.com/t/11099]中的”CDN平台创建证书”部分：https://xz.aliyun.com/t/11099#toc-3
+```
+要注意，创建时要保存证书和私钥，不然后面没法再看到私钥
+```
+## 步骤4 CDN平台禁用缓存
+此处需要大量图文说明，参见文章(https://xz.aliyun.com/t/11099)[https://xz.aliyun.com/t/11099]中的”CDN平台禁用缓存”部分：https://xz.aliyun.com/t/11099#toc-4
+## 步骤5 生成CS证书
+进入vps中的cs文件夹中，创建两个文件：server.pem（文件中贴入上面的源证书）和server.key（文件中贴入上面的私钥），然后生成新的cobaltstrike证书，如果原先的cobaltstrike文件夹内有默认的.store证书，需要先删除掉默认的
+```
+openssl pkcs12 -export -in server.pem -inkey server.key -out cfcert.p12 -name cloudflare_cert -passout pass:123456
+
+这里是利用pem和key文件创建新的cert证书，这里的pass密码需要修改，改为复杂的密码，不要使用123456
+```
+借助生成的cert证书，通过以下命令生成store证书
+```
+keytool -importkeystore -deststorepass 123456 -destkeypass 123456 -destkeystore cfcert.store -srckeystore cfcert.p12 -srcstoretype PKCS12 -srcstorepass 123456 -alias cloudflare_cert
+```
+## 步骤6 创建profile文件
+```
+set sleeptime "3000";
+
+https-certificate {
+    set keystore "cfcert.store";
+    set password "123456";
+}
+
+http-stager {
+    set uri_x86 "/api/1";
+    set uri_x64 "/api/2";
+    client {
+        header "Host" "ybdt.test.com";}
+    server {
+        output{
+            print;
+        }
+    }
+}
+
+http-get {
+    set uri "/api/3";
+    client {
+        header "Host" "ybdt.test.com";
+        metadata {
+            base64;
+            header "Cookie";
+        }
+    }
+    server {
+        output {
+            print;
+        }
+    }
+}
+
+http-post {
+    set uri "/api/4";
+    client {
+        header "Host" "ybdt.test.com";
+        id {
+            uri-append;
+        }
+        output {
+            print;
+        }
+    }
+    server {
+        output {
+            print;
+        }
+    }
+}
+
+```
+## 步骤7 创建监听器
+此处参见文章(https://xz.aliyun.com/t/11099)[https://xz.aliyun.com/t/11099]中的”启动teamserver”部分：https://xz.aliyun.com/t/11099#toc-9
+```
+需要注意，CloudFlare CDN免费支持的端口如下
+http:
+80、8080、8880、2052、2082、2086、2095
+https:
+443、2053、2083、2087、2096、8443
+```
+## 步骤8 上线测试
+上线后，我这边wireshark抓包，抓到的ip查询后发现是微软云（可能是cloudflare的节点在微软云上，或其他原因），如下图  
+![image](./pic/01.png)
+```
+注意，vps的防火墙要打开，我就在这卡了一会
+```
 
 # 0x04 CS上线微信提醒
+此处参见文章(https://xz.aliyun.com/t/10698)[https://xz.aliyun.com/t/10698]中的”微信单人提醒”部分：https://xz.aliyun.com/t/11099#toc-9
+
+vps会提示需要转发x11请求，解决办法：启动时需要加一个参数-Djava.awt.headless=true，修改后如下
+```
+java -XX:ParallelGCThreads=4 -XX:+AggressiveHeap -XX:+UseParallelGC -Djava.awt.headless=true -classpath ./cobaltstrike.jar aggressor.headless.Start $*
+```
+注释掉一处安全提醒
+```
+This can be done by editing the accessibility.properties file for OpenJDK:
+sudo vim /etc/java-8-openjdk/accessibility.properties
+Comment out the following line:
+assistive_technologies=org.GNOME.Accessibility.AtkWrapper
+```
+
+# 参考链接
+```
+https://xz.aliyun.com/t/11099
+https://xz.aliyun.com/t/10698
+https://github.com/microsoft/vscode-arduino/issues/644
+```
