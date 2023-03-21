@@ -113,7 +113,7 @@ https:
 ```
 
 # 0x04 CS上线微信提醒
-此处参见文章(https://xz.aliyun.com/t/10698)[https://xz.aliyun.com/t/10698]中的”微信单人提醒”部分：https://xz.aliyun.com/t/11099#toc-9
+此处参见文章[https://xz.aliyun.com/t/10698](https://xz.aliyun.com/t/10698)中的”微信单人提醒”部分：https://xz.aliyun.com/t/11099#toc-9
 
 vps会提示需要转发x11请求，解决办法：启动时需要加一个参数-Djava.awt.headless=true，修改后如下
 ```
