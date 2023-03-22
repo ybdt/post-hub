@@ -128,6 +128,10 @@ sudo vim /etc/java-8-openjdk/accessibility.properties
 Comment out the following line:
 assistive_technologies=org.GNOME.Accessibility.AtkWrapper
 ```
+agscript-start.sh如下
+```
+./agscript CS公网IP CS端口 用户名 CS密码 PushPlus.cna
+```
 
 # 参考链接
 ```
