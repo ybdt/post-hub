@@ -21,14 +21,14 @@
 需要注意，添加DNS记录时格式如下
 Name：ybdt，IPv4 address：服务器 IP
 ```
-此处需要图文说明，参见文章[https://xz.aliyun.com/t/11099](https://xz.aliyun.com/t/11099)中的”CDN平台配置DNS解析”部分，地址：https://xz.aliyun.com/t/11099#toc-2
+此处需要图文说明，参见文章[https://xz.aliyun.com/t/11099](https://xz.aliyun.com/t/11099)中的[CDN平台配置DNS解析](https://xz.aliyun.com/t/11099#toc-2)部分
 ### 步骤3 CDN平台创建证书
 ```
 需要注意，创建时要保存证书和私钥，不然后面没法再看到私钥
 ```
-此处需要图文说明，参见文章[https://xz.aliyun.com/t/11099](https://xz.aliyun.com/t/11099)中的”CDN平台创建证书”部分，地址：https://xz.aliyun.com/t/11099#toc-3
+此处需要图文说明，参见文章[https://xz.aliyun.com/t/11099](https://xz.aliyun.com/t/11099)中的[CDN平台创建证书](https://xz.aliyun.com/t/11099#toc-3)部分
 ### 步骤4 CDN平台禁用缓存
-此处需要图文说明，参见文章[https://xz.aliyun.com/t/11099](https://xz.aliyun.com/t/11099)中的”CDN平台禁用缓存”部分，地址：https://xz.aliyun.com/t/11099#toc-4
+此处需要图文说明，参见文章[https://xz.aliyun.com/t/11099](https://xz.aliyun.com/t/11099)中的[CDN平台禁用缓存](https://xz.aliyun.com/t/11099#toc-4)部分
 ### 步骤5 生成CS证书
 进入vps中的cs文件夹中，创建两个文件：server.pem（文件中贴入上面的源证书）和server.key（文件中贴入上面的私钥），用于生成新的cobaltstrike证书，如果原先的cobaltstrike文件夹内有默认的.store证书，需要先删除掉
 ```
@@ -98,7 +98,7 @@ http-post {
 
 ```
 ### 步骤7 创建监听器
-此处需要图文说明，参见文章[https://xz.aliyun.com/t/11099](https://xz.aliyun.com/t/11099)中的”启动teamserver”部分，地址：https://xz.aliyun.com/t/11099#toc-9
+此处需要图文说明，参见文章[https://xz.aliyun.com/t/11099](https://xz.aliyun.com/t/11099)中的[启动teamserver](https://xz.aliyun.com/t/11099#toc-9)部分
 ```
 需要注意，CloudFlare CDN免费支持的端口如下
 http:
@@ -114,7 +114,7 @@ https:
 ```
 
 # 0x04 CS上线微信提醒
-此处需要图文说明，参见文章[https://xz.aliyun.com/t/10698](https://xz.aliyun.com/t/10698)中的”微信单人提醒”部分，地址：https://xz.aliyun.com/t/11099#toc-9
+此处需要图文说明，参见文章[https://xz.aliyun.com/t/10698](https://xz.aliyun.com/t/10698)中的[微信单人提醒](https://xz.aliyun.com/t/11099#toc-9)部分
 
 不过有2处需要修改：  
 01、vps会提示需要转发x11请求，解决办法：启动时需要加一个参数-Djava.awt.headless=true，修改后agscript如下
