@@ -17,26 +17,26 @@
 ### 步骤1 注册一个域名
 有的文章提到使用www.freenom.com平台进行注册，我这边测试从freenom注册免费域名挺费劲的，试了几次都没成功，建议从namesilo购买一个域名，选一个不那么大众化的，每年0.99$
 ### 步骤2 cdn平台配置dns解析
-此处需要图文说明，参见文章[https://xz.aliyun.com/t/11099](https://xz.aliyun.com/t/11099)中的”CDN平台配置DNS解析”部分，地址：https://xz.aliyun.com/t/11099#toc-2
 ```
-添加DNS记录时如下
+需要注意，添加DNS记录时格式如下
 Name：ybdt，IPv4 address：服务器 IP
 ```
+此处需要图文说明，参见文章[https://xz.aliyun.com/t/11099](https://xz.aliyun.com/t/11099)中的”CDN平台配置DNS解析”部分，地址：https://xz.aliyun.com/t/11099#toc-2
 ### 步骤3 CDN平台创建证书
+```
+需要注意，创建时要保存证书和私钥，不然后面没法再看到私钥
+```
 此处需要图文说明，参见文章[https://xz.aliyun.com/t/11099](https://xz.aliyun.com/t/11099)中的”CDN平台创建证书”部分，地址：https://xz.aliyun.com/t/11099#toc-3
-```
-要注意，创建时要保存证书和私钥，不然后面没法再看到私钥
-```
 ### 步骤4 CDN平台禁用缓存
 此处需要图文说明，参见文章[https://xz.aliyun.com/t/11099](https://xz.aliyun.com/t/11099)中的”CDN平台禁用缓存”部分，地址：https://xz.aliyun.com/t/11099#toc-4
 ### 步骤5 生成CS证书
-进入vps中的cs文件夹中，创建两个文件：server.pem（文件中贴入上面的源证书）和server.key（文件中贴入上面的私钥），然后生成新的cobaltstrike证书，如果原先的cobaltstrike文件夹内有默认的.store证书，需要先删除掉默认的
+进入vps中的cs文件夹中，创建两个文件：server.pem（文件中贴入上面的源证书）和server.key（文件中贴入上面的私钥），用于生成新的cobaltstrike证书，如果原先的cobaltstrike文件夹内有默认的.store证书，需要先删除掉
 ```
 openssl pkcs12 -export -in server.pem -inkey server.key -out cfcert.p12 -name cloudflare_cert -passout pass:123456
 
 这里是利用pem和key文件创建新的cert证书，这里的pass密码需要修改，改为复杂的密码，不要使用123456
 ```
-借助生成的cert证书，通过以下命令生成store证书
+再利用生成的cert证书生成store证书
 ```
 keytool -importkeystore -deststorepass 123456 -destkeypass 123456 -destkeystore cfcert.store -srckeystore cfcert.p12 -srcstoretype PKCS12 -srcstorepass 123456 -alias cloudflare_cert
 ```
@@ -53,9 +53,10 @@ http-stager {
     set uri_x86 "/api/1";
     set uri_x64 "/api/2";
     client {
-        header "Host" "ybdt.test.com";}
+        header "Host" "ybdt.test.com";
+    }
     server {
-        output{
+        output {
             print;
         }
     }
@@ -116,11 +117,11 @@ https:
 此处需要图文说明，参见文章[https://xz.aliyun.com/t/10698](https://xz.aliyun.com/t/10698)中的”微信单人提醒”部分，地址：https://xz.aliyun.com/t/11099#toc-9
 
 不过有2处需要修改：  
-01、vps会提示需要转发x11请求，解决办法：启动时需要加一个参数-Djava.awt.headless=true，修改后如下
+01、vps会提示需要转发x11请求，解决办法：启动时需要加一个参数-Djava.awt.headless=true，修改后agscript如下
 ```
 java -XX:ParallelGCThreads=4 -XX:+AggressiveHeap -XX:+UseParallelGC -Djava.awt.headless=true -classpath ./cobaltstrike.jar aggressor.headless.Start $*
 ```
-02、注释掉一处安全提醒
+02、启动时会有安全提醒，需要注释掉如下
 ```
 This can be done by editing the accessibility.properties file for OpenJDK:
 sudo vim /etc/java-8-openjdk/accessibility.properties
