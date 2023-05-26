@@ -8,7 +8,7 @@
 
 启动时发现53端口被占用，执行命令：systemctl stop systemd-resolved
 
-阿里云购买一个域名，开始配置  
+阿里云购买一个域名：a.com，开始配置  
 添加一个A记录，名为ns，值为vps的ip地址  
 添加一个ns记录，名为log，值为ns.a.com（刚才添加的A记录）  
 
