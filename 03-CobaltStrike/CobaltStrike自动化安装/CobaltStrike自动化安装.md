@@ -1,3 +1,5 @@
+发现自己经常需要在新环境下安装CobaltStrike，每次都手动安装效率有点低，故有此笔记
+
 参考项目：https://github.com/AlphabugX/csOnvps
 
 对项目中的自动化安装脚本进行解读，具体见文件run.sh
