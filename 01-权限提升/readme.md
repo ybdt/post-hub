@@ -1,9 +1,9 @@
 # Linux提权
-Linux-Exploit-Suggester   https://github.com/The-Z-Labs/linux-exploit-suggester  
-Linux-Exploit-Suggester-2   https://github.com/jondonas/linux-exploit-suggester-2  
-GTFOBins   https://gtfobins.github.io/  
-Traitor   https://github.com/liamg/traitor  
-LinPEAS - Linux Privilege Escalation Awesome Script   https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS  
+Linux-Exploit-Suggester -> https://github.com/The-Z-Labs/linux-exploit-suggester  
+Linux-Exploit-Suggester-2 -> https://github.com/jondonas/linux-exploit-suggester-2  
+GTFOBins -> https://gtfobins.github.io/  
+Traitor -> https://github.com/liamg/traitor  
+LinPEAS - Linux Privilege Escalation Awesome Script -> https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS  
 
 
 
