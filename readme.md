@@ -30,7 +30,13 @@ make linux
 #被控端
 umask 077; HOME=/var/tmp ./tshd
 ./tshd
+
+
+内网渗透的一些思路分享
+https://mp.weixin.qq.com/s/tqd9jJJv4bmzN6xVdpGDow
 ```
+
+
 
 # 参考
 https://github.com/safe6Sec/command
