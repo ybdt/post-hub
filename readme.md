@@ -1,8 +1,5 @@
 # To Do
 ```
-0x01 vCenter后利用
-https://forum.butian.net/share/1987
-
 0x02 【免杀的】横向移动命令执行
 https://github.com/rootclay/WMIHACKER
 
