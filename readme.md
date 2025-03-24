@@ -22,7 +22,9 @@ https://github.com/HackerCalico/Magic_C2
 ```
 ## Linux
 ```
-1、写入ssh公钥
+1、读取/etc/shadow后，去cmd5解密
+2、修改/etc/shadow中密码
+3、写入ssh公钥
 ```
 
 
@@ -54,25 +56,44 @@ https://github.com/zema1/suo5
 https://github.com/L-codes/Neo-reGeorg
 ```
 
-# 04、主机敏感信息收集
+# 04、凭据窃取
+```
+```
+
+# 05、主机敏感信息收集
 ```
 ASPX网站数据库密码加密存储
 https://github.com/aleenzz/InjectSQLServer
 
 https://github.com/GhostPack/Seatbelt
+https://github.com/lintstar/SharpHunter
+https://github.com/qwqdanchun/Pillager
 ```
 
-# 05、内网探测扫描
+# 06、内网探测扫描
 ```
 https://github.com/shadow1ng/fscan
 nltest
 ```
-# 06、内网漏洞利用
+文件上传失败时，可尝试先分割，上传后再合并
+```
+md5sum f
+split -b 3M --verbose f f_
+cat f_aa f_ab f_ac > f
+md5sum f
+```
+
+# 07、内网漏洞利用
 域环境下常规打法：上传bloodbound客户端搜集域内信息，把结果回传本地后，利用kali的bloodbound服务端解析，分析域内的薄弱环节
 ```
 【免杀的】横向移动命令执行
 https://github.com/rootclay/WMIHACKER
 ```
+
+# 08、域渗透
+```
+```
+
 # 参考
 ```
 https://github.com/safe6Sec/command
