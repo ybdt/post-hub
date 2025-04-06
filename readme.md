@@ -113,4 +113,5 @@ md5sum f
 ```
 https://github.com/safe6Sec/command
 https://mp.weixin.qq.com/s/tqd9jJJv4bmzN6xVdpGDow
+https://mp.weixin.qq.com/s/LK8zfWlz0s3v93sIY9DztQ【某师傅造的仿真环境，从GetShell到提权root】
 ```
