@@ -55,9 +55,10 @@ https://github.com/L-codes/Neo-reGeorg
 
 # 04、凭证窃取
 ```
-# Windows下凭证窃取
+# Windows系统凭证窃取
+    https://github.com/gentilkiwi/mimikatz
 
-# Linux下凭证窃取
+# Linux系统凭证窃取
     0x01 可以获取密文
         01、读取/etc/shadow后，使用cmd5进行解密：
             https://www.cmd5.com/
@@ -71,6 +72,9 @@ https://github.com/L-codes/Neo-reGeorg
             hashcat -m 3200 ./hash.txt ./rockyou.txt
     0x02 无法获取密文
         01、劫持ssh密码
+
+# 软件凭据窃取
+    https://github.com/AlessandroZ/LaZagne
 ```
 
 # 05、主机敏感信息收集
