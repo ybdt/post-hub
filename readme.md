@@ -1,4 +1,4 @@
-# 01、后门远控C2
+# 01-后门远控C2
 ```
 https://www.vipshare.com/【WorkWin】
 https://www.netsupportmanager.com/zh-CN/【NetSupportManager】
@@ -24,7 +24,7 @@ Linux下权限维持
 2、写入ssh公钥
 ```
 
-# 02、权限提升
+# 02-权限提升
 ```
 # Windows下权限提升
     0x01 漏洞提权
@@ -32,6 +32,8 @@ Linux下权限维持
         https://github.com/SecWiki/windows-kernel-exploits
         https://forum.butian.net/share/860
         https://github.com/uknowsec/SweetPotato
+        https://github.com/zcgonvh/DCOMPotato/tree/master
+        https://forum.butian.net/share/860
 
 # Linux下权限提升
     0x01 漏洞提权
@@ -45,7 +47,7 @@ Linux下权限维持
         find / -perm -4000 -type f -exec ls -l {} \;
 ```
 
-# 03、隧道搭建
+# 03-隧道搭建
 ```
 https://github.com/CodeSecurityTeam/frp
 https://github.com/jpillora/chisel
@@ -53,10 +55,11 @@ https://github.com/zema1/suo5
 https://github.com/L-codes/Neo-reGeorg
 ```
 
-# 04、凭证窃取
+# 04-凭证窃取
 ```
 # Windows系统凭证窃取
     https://github.com/gentilkiwi/mimikatz
+    https://github.com/StarfireLab/SharpWeb
 
 # Linux系统凭证窃取
     0x01 可以获取密文
@@ -77,7 +80,7 @@ https://github.com/L-codes/Neo-reGeorg
     https://github.com/AlessandroZ/LaZagne
 ```
 
-# 05、主机敏感信息收集
+# 05-主机敏感信息收集
 ```
 https://github.com/aleenzz/InjectSQLServer【ASPX网站数据库密码加密存储】
 https://github.com/GhostPack/Seatbelt
@@ -89,7 +92,7 @@ Windows下主机敏感信息收集
 Linux下主机敏感信息收集
 ```
 
-# 06、内网探测扫描
+# 06-内网探测扫描
 ```
 https://github.com/shmilylty/netspy
 https://github.com/shadow1ng/fscan
@@ -103,12 +106,12 @@ cat f_aa f_ab f_ac > f
 md5sum f
 ```
 
-# 07、内网漏洞利用
+# 07-内网漏洞利用
 ```
 【免杀的横向移动命令执行】https://github.com/rootclay/WMIHACKER
 ```
 
-# 08、域渗透
+# 08-域渗透
 ```
 域环境下常规打法：上传bloodbound客户端搜集域内信息，把结果回传本地后，利用kali的bloodbound服务端解析，分析域内的薄弱环节
 ```
