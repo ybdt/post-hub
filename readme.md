@@ -1,27 +1,31 @@
-# 01-后门远控C2
+# 01-远控C2
 ```
-0x01 优秀项目
+0x01 远控优秀项目
+    https://github.com/quasar/Quasar
+    https://github.com/yuanyuanxiang/SimpleRemoter【主控端win10，被控端win11，虚拟机桥接，将生成的demo.exe和DLL放入被控端，经测试，可用】
     https://www.vipshare.com/【WorkWin】
     https://www.netsupportmanager.com/zh-CN/【NetSupportManager】
-    https://github.com/quasar/Quasar
+    https://github.com/moom825/xeno-rat
+    https://anydesk.com/en
+
+0x02 C2优秀项目
+    https://www.cobaltstrike.com/
+    https://bruteratel.com/
+    https://nighthawkc2.io/
     https://github.com/n1nj4sec/pupy
-    https://github.com/Cr4sh/MicroBackdoor
-    https://github.com/orangetw/tsh
-    https://github.com/yuanyuanxiang/SimpleRemoter
-    https://github.com/Cc28256/CcRemote
     https://github.com/rapid7/metasploit-framework
-    https://github.com/BishopFox/sliver
     https://github.com/HavocFramework/Havoc
-    https://github.com/HackerCalico/Magic_C2
+    https://github.com/BishopFox/sliver
+    https://github.com/its-a-feature/Mythic
     https://github.com/Adaptix-Framework/AdaptixC2【类似Havoc，Client端C++ QT、Server端Golang、Beacon端C/C++】
 
-0x02 Windows权限维持
+0x03 Windows权限维持
     1、启动文件夹
     2、注册表
     3、服务
     4、任务计划
 
-0x03 Linux权限维持
+0x04 Linux权限维持
     1、修改/etc/shadow中密码
     2、写入ssh公钥
 ```
@@ -52,7 +56,7 @@
 # 03-隧道搭建
 ```
 0x01 优秀项目
-    https://github.com/CodeSecurityTeam/frp
+    https://github.com/CodeSecurityTeam/frp【服务端Ubuntu 22.04，在Win10下编译后，，在Win11下执行，经测试可成功上线】
     https://github.com/jpillora/chisel
     https://github.com/zema1/suo5
     https://github.com/L-codes/Neo-reGeorg
@@ -69,6 +73,9 @@
         https://github.com/StarfireLab/SharpWeb
         https://dre4merp.github.io/2024/12/利用-seclogon-ppid-spoofing-实现-dump-lsass-内存/
         https://vari-sh.github.io/posts/doppelganger/
+    02 键盘记录
+        https://cicada-8.medium.com/im-watching-you-how-to-spy-windows-users-via-ms-uia-c9acd30f94c4【创新的键盘记录方式，绕过EDR监控】
+        https://github.com/CICADA8-Research/Spyndicapped
 
 # 0x02 Linux下凭证窃取
     01 可以获取密文
@@ -87,6 +94,10 @@
 
 # 0x03 软件凭据窃取
     https://github.com/AlessandroZ/LaZagne
+    https://github.com/moonD4rk/HackBrowserData
+    https://github.com/qwqdanchun/Pillager
+    https://github.com/djhohnstein/SharpWeb
+    https://github.com/Meckazin/ChromeKatz
 ```
 
 # 05-主机敏感信息收集
@@ -137,9 +148,27 @@
         https://github.com/rootclay/WMIHACKER
 ```
 
-# 08-域渗透
+# 08-内网钓鱼攻击
+```
+# 通达OA
+CSS路径：D:\MYOA\webroot\static\theme\9\ipanel.css
+JS路径：D:\MYOA\webroot\static\js\ba\agent.js
+
+# 泛微OA
+CSS路径：D:\WEAVER\ecology\cloudstore\dev\init.css
+JS路径：D:\WEAVER\ecology\js\timeZone\timeZone.js
+
+# 万户OA
+CSS路径：d:\jboss\jboss-as\server\oa\deploy\defaultroot.war\scripts\desktop\popwin.css
+JS路径：d:\jboss\jboss-as\server\oa\deploy\defaultroot.war\desktop.jsp
+上面的JS是在JSP页面中插入<script>代码块，所以需要在</body>标签前面插入
+```
+
+# 09-域渗透
 ```
 # 0x01 域渗透
     01 信息收集
         域环境下常规打法：上传bloodbound客户端搜集域内信息，把结果回传本地后，利用kali的bloodbound服务端解析，分析域内的薄弱环节
+    02 LOLAD
+        https://lolad-project.github.io/
 ```
