@@ -11,10 +11,12 @@ https://github.com/lintstar/SharpHunter
 https://github.com/GhostPack/Seatbelt
 https://github.com/aleenzz/InjectSQLServer
 
-
 # Linux Credential Dump
 https://www.cmd5.com/
 https://www.tunnelsup.com/hash-analyzer/
 https://hashcat.net/wiki/doku.php?id=example%20hashes
 https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
+
+# Virtualiation Dump
+https://github.com/nikaiw/VMkatz
 ```

@@ -13,10 +13,17 @@
 
 # Excellent-Article-and-Project
 ```
+# Lateral Movement With/Without Domain
 https://www.incendium.rocks/posts/Automating-MS-RPC-Vulnerability-Research/
+https://github.com/n00py/Outpacket
 https://github.com/fortra/impacket
+https://github.com/trustedsec/Titanis
+https://github.com/skelsec/minikerberos
 https://github.com/rootclay/WMIHACKER
-
+https://github.com/SpecterOps/BloodHound
+https://lolad-project.github.io/
+【Internal All The Things】https://swisskyrepo.github.io/InternalAllTheThings/
+【红队攻防：快速拿下域控的思路打法】https://mp.weixin.qq.com/s/y8DtKYO-ZclbmEAXWBvkhg
 
 # Database Attack
 https://github.com/SafeGroceryStore/MDUT
